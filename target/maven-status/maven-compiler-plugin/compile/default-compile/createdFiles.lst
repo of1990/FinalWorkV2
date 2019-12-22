@@ -1,0 +1,7 @@
+Service/ProductService.class
+Database/Category.class
+Database/Product.class
+Service/ProductException.class
+UIConsole/UIService.class
+Database/ProductRepository.class
+Service/Repository.class

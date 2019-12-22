@@ -3,10 +3,15 @@ package UIConsole;
 import Database.Category;
 import Service.ProductException;
 import Service.ProductService;
+
 import java.math.BigDecimal;
 import java.util.Scanner;
 
 public class UIService {
+    public UIService() {
+
+    }
+
     public static void main(String[] args) throws ProductException {
         System.out.println("Welcome!");
         System.out.println("===================");
@@ -15,7 +20,12 @@ public class UIService {
     }
 
     Scanner uiService = new Scanner(System.in);
-    ProductService ps = new ProductService();
+    ProductService ps;
+
+    public UIService(ProductService ps) {
+        this.ps = ps;
+    }
+
     String input;
     int command;
 

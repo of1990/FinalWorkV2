@@ -10,7 +10,12 @@ import java.util.List;
 import static java.math.BigDecimal.ROUND_DOWN;
 
 public class ProductService implements Repository<Product> {
-    ProductRepository database = new ProductRepository();
+
+    ProductRepository database;
+
+    public ProductService(ProductRepository database) {
+        this.database = database;
+    }
 
     @Override
     public List findAll() {
