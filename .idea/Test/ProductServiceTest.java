@@ -17,7 +17,9 @@ public class ProductServiceTest {
             new BigDecimal(0.05), "apples from Latvia");
     Product product2 = new Product("milk", new BigDecimal(1.50), Category.MILK,
             new BigDecimal(0.05), "cold milk");
-    ProductService db = new ProductService();
+    ProductRepository database = new ProductRepository();
+
+    ProductService db = new ProductService(database);
 
     public ProductServiceTest() throws ProductException {
     }
